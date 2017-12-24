@@ -4,13 +4,10 @@ import { NgSemanticModule } from 'ng-semantic';
 
 
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './button/button.component';
-
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ButtonComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
