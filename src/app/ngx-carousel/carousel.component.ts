@@ -29,12 +29,17 @@ import { NgxCarousel, NgxCarouselStore} from 'ngx-carousel';
     `,
     styles: [ `
 
-        bannerStyle h1 {
+        bannerStyle {
             background-color: #ccc;
             min-height: 300px;
             text-align: center;
             line-height: 300px;
         }
+
+        img {
+            width: 100%;
+        }
+
         .leftRs {
             position: absolute;
             margin: auto;

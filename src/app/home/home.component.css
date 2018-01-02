@@ -1,12 +1,13 @@
 main {
-    padding: 8px 16px; 
-    margin-top: 24px;
+    min-height: calc(100vh - 70px);
 }
 
 .headline {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 8px 16px; 
+    margin-top: 24px;
 }
 
 .description {
