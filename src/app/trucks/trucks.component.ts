@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-trucks',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrucksComponent implements OnInit {
 
-  constructor() { }
+  trucksObservable: Observable<any[]>;
+
+  constructor(private db: AngularFireDatabase) { }
 
   ngOnInit() {
+    this.trucksObservable = this.getTrucks('/trucks');
+  }
+
+  getTrucks(listPath) : Observable<any[]> {
+    return this.db.list(listPath).valueChanges();
   }
 
 }

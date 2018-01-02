@@ -1,3 +1,6 @@
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgSemanticModule } from 'ng-semantic';
@@ -12,6 +15,7 @@ import { CarouselComponent } from './ngx-carousel/carousel.component';
 import { TrucksComponent } from './trucks/trucks.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { environment } from './../environments/environment';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     BrowserModule,
     NgSemanticModule,
     NgxCarouselModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

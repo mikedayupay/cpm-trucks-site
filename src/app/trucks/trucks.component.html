@@ -1,3 +1,17 @@
-<p>
-  trucks works!
-</p>
+<main>
+  <sm-cards *ngFor="let truck of trucksObservable | async">
+    <sm-card class="card">
+      <div class="image">
+        <img src="../../assets/images/isuzu1.jpg" alt="">
+      </div>
+      <div class="content">
+        <a href="" class="header">{{truck.brandName + " " + truck.model}}</a>
+        <div class="meta">
+          <span class="date">{{truck.year}}</span>
+        </div>
+        <div class="description">{{truck.description}}</div>
+      </div>
+    </sm-card>
+  </sm-cards>
+
+</main>
