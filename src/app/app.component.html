@@ -1,12 +1,24 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<header>
-    <nav>
-        <ul class="menu">
-            <li>Home</li>
-            <li>Trucks</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-        </ul>
-    </nav>
-</header>
-<app-home></app-home>
+<nav>
+  <ul class="menu">
+    <li>
+      <a routerLink="/home">Home</a>
+    </li>
+    <li class="dropdown">
+      <a class="dropbtn">Trucks</a>
+      <div class="dropdown-content">
+        <a routerLink="/trucks">Light-Duty Trucks</a>
+        <a routerLink="/trucks">Medium-Duty Trucks</a>
+        <a routerLink="/trucks">Heavy-Duty Trucks</a>
+      </div>
+    </li>
+    <li>
+      <a routerLink="/contact-us">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+<footer>
+  <span class="copyright">Copyright Central Pacific Motors Philippines 2018.</span>
+</footer>
+
