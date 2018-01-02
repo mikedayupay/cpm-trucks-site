@@ -1,0 +1,14 @@
+main {
+    padding: 8px 16px; 
+    margin-top: 24px;
+}
+
+.headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description {
+    padding: 8px 16px;
+}

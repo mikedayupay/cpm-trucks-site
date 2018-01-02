@@ -62,6 +62,11 @@ import { NgxCarousel, NgxCarouselStore} from 'ngx-carousel';
             border-radius: 999px;
         }
 
+        .leftRs:hover, .rightRs:hover {
+            color: red;
+            background-color: rgb(0,0,0,1);
+        }
+
     `]
 
 })
