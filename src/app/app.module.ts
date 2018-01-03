@@ -16,6 +16,7 @@ import { TrucksComponent } from './trucks/trucks.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { environment } from './../environments/environment';
+import { TruckService } from './truck.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { environment } from './../environments/environment';
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [ TruckService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
