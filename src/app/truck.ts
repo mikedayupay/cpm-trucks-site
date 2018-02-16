@@ -1,8 +1,14 @@
 export class Truck {
     id: number;
-    brandName: string;
-    modelName: string;
+    brand: string;
+    chassis: string;
+    engine: string;
+    model: string;
     description: string;
-    yearModel: number;
-    imageUrl: string;
+    year: number;
+    type: string;
+
+    public getDescription() {
+        return this.description;
+    }
 }
