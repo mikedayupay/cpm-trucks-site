@@ -1,24 +1,50 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<nav>
-  <ul class="menu">
+<header sticky sticky-start="20">
+  <clr-dropdown fxHide.gt-sm="true">
+    <button type="button" clrDropdownTrigger>
+        <clr-icon shape="bars" class="is-solid is-error small-dropmenu" size="36"></clr-icon>
+    </button>
+    <clr-dropdown-menu *clrIfOpen>
+      <a routerLink="/home" clrDropdownItem>Home</a>
+      <a routerLink="/about-us" clrDropdownItem>About Us</a>
+      <clr-dropdown>
+        <span clrDropdownTrigger>Trucks</span>
+        <clr-dropdown-menu clrPosition="right-top">
+          <a [routerLink]="['trucks', 'light']" clrDropdownItem>Light-Duty Trucks</a>
+          <a [routerLink]="['trucks', 'medium']" clrDropdownItem>Medium-Duty Trucks</a>
+          <a [routerLink]="['trucks', 'heavy']" clrDropdownItem>Heavy-Duty Trucks</a>
+        </clr-dropdown-menu>
+      </clr-dropdown>
+      <a routerLink="/contact-us" clrDropdownItem>Contact Us</a>
+    </clr-dropdown-menu>
+  </clr-dropdown>
+  <a class="title" [routerLink]="['/home']">
+    <img fxHide.lt-md="true" src="../../assets/images/logocpms.jpg" alt="{{title}}">
+    <span fxHide.md="true">{{title}}</span>
+  </a>
+  <ul class="menu" fxHide.lt-md="true">
     <li>
-      <a routerLink="/home">Home</a>
+      <a routerLink="/home" routerLinkActive="active-link">Home</a>
     </li>
-    <li class="dropdown">
+    <li>
+      <a routerLink="/about-us" routerLinkActive="active-link">About Us</a>
+    </li>
+    <li class="dropmenu" routerLinkActive="active-link">
       <a class="dropbtn">Trucks</a>
-      <div class="dropdown-content">
-        <a routerLink="/trucks">Light-Duty Trucks</a>
-        <a routerLink="/trucks">Medium-Duty Trucks</a>
-        <a routerLink="/trucks">Heavy-Duty Trucks</a>
+      <div class="dropmenu-content">
+        <a [routerLink]="['trucks', 'light']">Light-Duty Trucks</a>
+        <a [routerLink]="['trucks', 'medium']">Medium-Duty Trucks</a>
+        <a [routerLink]="['trucks', 'heavy']">Heavy-Duty Trucks</a>
       </div>
     </li>
     <li>
-      <a routerLink="/contact-us">Contact Us</a>
+      <a routerLink="/contact-us" routerLinkActive="active-link">Contact Us</a>
     </li>
   </ul>
-</nav>
+</header>
 <router-outlet></router-outlet>
 <footer>
-  <span class="copyright">Copyright Central Pacific Motors Philippines 2018.</span>
+  <span class="copyright">
+    &copy; Central Pacific Motors Philippines 2018.</span>
 </footer>
 

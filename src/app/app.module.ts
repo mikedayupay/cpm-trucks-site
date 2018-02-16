@@ -3,8 +3,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgSemanticModule } from 'ng-semantic';
 import { NgxCarouselModule } from 'ngx-carousel';
+import { StickyModule } from 'ng2-sticky-kit';
+import { ClarityModule } from '@clr/angular';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 
 
@@ -17,6 +19,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { environment } from './../environments/environment';
 import { TruckService } from './truck.service';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { TruckDetailsComponent } from './truck-details/truck-details.component';
 
 @NgModule({
   declarations: [
@@ -24,16 +28,20 @@ import { TruckService } from './truck.service';
     HomeComponent,
     CarouselComponent,
     TrucksComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AboutUsComponent,
+    TruckDetailsComponent
   ],
   imports: [
     BrowserModule,
-    NgSemanticModule,
+    ClarityModule,
+    FlexLayoutModule,
     NgxCarouselModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    StickyModule
   ],
   providers: [ TruckService ],
   bootstrap: [AppComponent]
