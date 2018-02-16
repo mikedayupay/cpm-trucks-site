@@ -1,0 +1,35 @@
+main {
+    flex: 1 0 auto;
+    padding: 32px 16px;
+}
+
+.headline-banner {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    padding: 16px;
+    color: #DA231B;
+    text-align: center;
+}
+
+.about div {
+    width: 80%;
+}
+
+.about {
+    padding: 8px;
+}
+
+.about-us {
+    width: 100%;
+    background-color: #071e22;
+    color: #FFFFFF;
+    padding: 16px 32px;
+}
+
+p {
+    text-align: justify;
+}
