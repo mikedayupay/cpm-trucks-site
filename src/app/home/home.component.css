@@ -1,15 +1,157 @@
 main {
-    min-height: calc(100vh - 70px);
+    flex: 1 0 auto;
 }
 
-.headline {
+.hero-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-image img {
+    opacity: 0.9;
+}
+
+.hero-text {
+    text-align: left;
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.hero-text h1 {
+    font-size: 34px;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+.our-focus {
+    background-color: #071e22;
+    width: 100%;
+    margin-top: -3px;
+    padding: 36px;
+    text-align: center;
+}
+
+.our-focus h1 {
+    color: #FFFFFF;
+}
+
+.our-focus-content h2{
+    color: #FFFFFF;
+}
+
+.our-focus-content p {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.second-row {
+    padding: 16px 8px; 
+    text-align: center;
+}
+
+.second-row-description {
+    margin-bottom: 24px;
+    padding: 16px 36px;
+}
+
+.second-row h1 {
+    font-size: 36px;
+    color: #343434;
+}
+
+.second-row p {
+    font-size: 18px;
+    color: #343434;
+    
+}
+
+.content {
+    position: absolute; /* Position the background text */
+    bottom: 10%; /* At the bottom. Use top:0 to append it to the top */
+    right: 0;
+    background-color: rgba(220, 53, 70, 0.6);
+    width: 40%; /* Full width */
+    padding-bottom: 20px; /* Some padding */
+}
+
+.content h5 {
+    color: #f9f9f9;
+}
+
+.heavy {
+    background-image: url("../../assets/images/heavy-duty.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    cursor: pointer;
+}
+
+.heavy:hover {
+    opacity: 0.8;
+}
+
+.light {
+    background-image: url("../../assets/images/nkr.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    cursor: pointer;
+}
+
+.light:hover {
+    opacity: 0.8;
+}
+
+.medium {
+    background-image: url("../../assets/images/forward.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    cursor: pointer;
+}
+
+.medium:hover {
+    opacity: 0.8;
+}
+
+.third-row {
+    margin-top: 36px;
+}
+
+.contact-us {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
+    align-content: space-around;
     align-items: center;
-    padding: 8px 16px; 
-    margin-top: 24px;
+    padding: 18px;
+    width: 100%;
+    background-color: #071e22;
+    color: #FFFFFF;
 }
 
-.description {
-    padding: 8px 16px;
+.contact-us-content{
+    text-align: center;
 }
+
+.contact-us-content h1{
+    color: #FFFFFF;
+}
+
+.visit-us {
+    text-align: center;
+}
+
+
+
+
+
+

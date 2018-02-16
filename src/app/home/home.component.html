@@ -1,34 +1,64 @@
 <main>
-  <div id="masthead">
-    <app-carousel></app-carousel>
+  <div class="hero-image">
+    <img src="../../assets/images/isuzu-hero-image.jpg" alt="" style="height: 650px; width: 100%;">
+    <div class="hero-text">
+      <h1>QUALITY AND AFFORDABLE TRUCKS FOR YOUR BUSINESS</h1>
+      <button class="btn btn-danger" [routerLink]="['/home']" fragment="our-trucks" (click)="goToTrucks()">OUR TRUCKS</button>
+    </div>
   </div>
-  <div class="headline">
-    <sm-cards>
-      <sm-card class="card">
-        <div class="image">
-          <img src="../../assets/images/isuzu1.jpg" alt="">
-        </div>
+  <div class="our-focus">
+    <h1>WHY CHOOSE US</h1>
+    <div class="row our-focus-content">
+      <div class="col-md-4">
+        <h2>TRUSTED</h2>
+        <p>Central Pacific Motors track record in the hauling industry is difficult to match, 
+          having been in the truck hauling for more than twenty years.</p>
+      </div>
+      <div class="col-md-4">
+        <h2>QUALITY</h2>
+        <p>Central Pacific Motors has a complete complement of well trained, skilled, experienced, 
+          and disciplined personnel to sustain its business for more than 20 years. With a happy and 
+          well directed personnel, Central Pacific assures its clientele that all goods and merchandise 
+          are in good and quality hands. </p>
+      </div>
+      <div class="col-md-4">
+        <h2>HASSLE-FREE</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quasi rem asperiores, maxime possimus ea eos cupiditate
+          expedita rerum error dolore iusto. Quia possimus cum placeat vitae, aspernatur fugiat est?</p>
+      </div>
+    </div>
+  </div>
+  <div id="our-trucks" class="second-row">
+    <div class="second-row-description">
+      <h1>OUR TRUCKS</h1>
+      <p>Our trucks comprises mainly of two brands, Isuzu and Mitsubishi Fuso. Both brands are renowned for their quality and
+        efficient trucks. Our trucks are divided into three categories that you can choose from depending on your needs.</p>
+    </div>
+    <div class="row flex-items-md-center heavy-row">
+      <div class="col-md-8 heavy" (click)="goToHeavy()">
         <div class="content">
-          <a href="" class="header">Title</a>
-          <div class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel libero at velit provident totam accusantium quidem nam asperiores
-            a facilis ducimus sunt ab, quae animi quibusdam, error repellat iste distinctio?
-          </div>
+          <h5>Heavy-Duty Trucks</h5>
         </div>
-      </sm-card>
-
-      <sm-card class="card">
-        <div class="image">
-          <img src="../../assets/images/isuzu1.jpg" alt="">
-        </div>
+      </div>
+    </div>
+    <div class="row flex-items-md-center">
+      <div class="col-md-4 light" (click)="goToLight()">
         <div class="content">
-          <a href="" class="header">Title</a>
-          <div class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam consectetur ullam nulla perferendis minus veritatis libero,
-            deserunt accusantium, et quae exercitationem illo voluptas vitae obcaecati neque repellat modi quam totam.
-          </div>
+          <h5>Light-Duty Trucks</h5>
         </div>
-      </sm-card>
-    </sm-cards>
+      </div>
+      <div class="col-md-4 medium" (click)="goToMedium()">
+        <div class="content">
+          <h5>Medium-Duty Trucks</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-us">
+    <div class="contact-us-content">
+      <h1>GOT ANY QUESTIONS?</h1>
+      <button class="btn btn-danger" routerLink="/contact-us">CONTACT US</button>
+    </div>
   </div>
 </main>
+
