@@ -1,3 +1,55 @@
 .content {
-    min-height: calc(100vh - 70px);
+    flex: 1 0 auto;
+}
+
+.masthead {
+    height: 50%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+img {
+    height: 500px;
+    width: 100%;
+    opacity: 0.4;
+}
+
+.image-text {
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    color: #010101;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    padding: 16px 16px; 
+}
+
+.contact-info {
+    width: 69%;
+    padding: 16px 32px;
+}
+
+.company-contacts {
+    width: 59%;
+    padding: 16px 32px;
+    background-color: #DC3545;
+}
+
+.company-contacts p, h2 {
+    color: white;
+}
+
+.indent {
+    text-align: left;
+    padding-left: 30px;
+    position: relative;
 }
