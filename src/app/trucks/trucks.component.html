@@ -1,16 +1,31 @@
+<h1 class="truck-title">{{title | uppercase}}</h1>
 <main>
-  <sm-cards *ngFor="let truck of trucksObservable | async">
-    <sm-card class="card">
-      <div class="image">
-        <img src="../../assets/images/isuzu1.jpg" alt="">
-      </div>
-      <div class="content">
-        <a href="" class="header">{{truck.brandName + " " + truck.model}}</a>
-        <div class="meta">
-          <span class="date">{{truck.year}}</span>
+  <div class="truck-container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4" *ngFor="let truck of trucksObservable | async" routerLink="/truck-detail/{{truck.id}}">
+        <div class="card clickable">
+          <div class="card-image">
+            <img src="../../assets/images/trucks/{{truck.chassis}}.jpeg" alt="">
+          </div>
+          <div class="card-block">
+            <h6 class="truck-model">{{truck.brand + " " + truck.model | uppercase}}</h6>
+            <span class="p1 date">{{truck.year}}</span>
+          </div>
+          <div class="card-block">
+            <ul class="list-unstyled">
+              <li>
+                <span>
+                  <strong>Chassis: </strong>{{truck.chassis}}</span>
+              </li>
+              <li>
+                <span>
+                  <strong>Engine: </strong>{{truck.engine}}</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="description">{{truck.description}}</div>
       </div>
-    </sm-card>
-  </sm-cards>
+    </div>
+  </div>
 </main>
+

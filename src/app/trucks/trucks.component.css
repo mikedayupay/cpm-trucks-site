@@ -1,4 +1,29 @@
 main {
-    min-height: calc(100vh - 70px);
+    flex: 1 0 auto;
     padding: 20px;
+    background-color: #FCFCFC;
+}
+
+.truck-title {
+    background-color: #071e22;
+    color: #FFFFFF;
+    padding: 16px 32px;
+    width: 100%;
+}
+
+.description span {
+    display: block;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+}
+
+.truck-model {
+    /* color: #1d7874; */
+}
+
+.date {
+    opacity: 0.8;
 }
