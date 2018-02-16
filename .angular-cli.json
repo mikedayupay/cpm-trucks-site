@@ -20,11 +20,13 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../semantic_ui_css/semantic.min.css"
+        "../node_modules/@clr/icons/clr-icons.min.css",
+        "../node_modules/@clr/ui/clr-ui.min.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
-        "../semantic_ui_css/semantic.min.js"
+        "../node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+        "../node_modules/@clr/icons/clr-icons.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
